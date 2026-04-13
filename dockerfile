@@ -1,3 +1,3 @@
-FROM eclipse-temurin:11-jdk
-COPY target/*.jar app.jar
-CMD ["java", "-jar", "app.jar"]
+FROM openjdk:8-jre-slim
+COPY target/simple-maven-app-1.0-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
